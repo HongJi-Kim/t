@@ -1,155 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="css/style1.css" />
+    <link rel="stylesheet" href="css/download.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
+    <title>Download</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-	<link rel="stylesheet" href="css/style1.css">
-	<link rel="stylesheet" href="css/download.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-	<title>Download</title>
-</head>
-
-<body>
-	<nav id="navbar">
-		<div class="navbar_container">
-			<div class="wrap">
-				<div class="navbar__logo" data-target="index">
-					<a href="index.html"><img src="images/logo.svg" alt=""></a>
-				</div>
-				<ul class="navbar__menu">
-					<li class="navbar__menu__item" data-target="feature" data-link="#feature">
-						Features
-					</li>
-					<li class="navbar__menu__item" data-target="download">
-						Download
-					</li>
-					<li class="navbar__menu__item" data-target="documentation">
-						<a href="https://makinarocks.gitbook.io/link/" target="blank">Documentation</a>
-					</li>
-					<button class="get_button">Get started for Free</button>
-				</ul>
-				<a class="navbar__toggle">
-					<span>메뉴</span>
-				</a>
-			</div>
-		</div>
-	</nav>
-	<section id="ex1" class="modal">
-		<div class="login">
-			<div class="text_container">
-				<div class="title">Download Link!</div>
-				<div class="sub_title">We support various OS such as Window, Apple , Linux</div>
-			</div>
-			<div class="input_container">
-				<form id="download_form">
-					<div class="email_container">
-						<div class="input_title">Email</div>
-						<input type="text" id="email" name="email">
-						<div class="invalid_text" id="email_error_field">{emai} is invalid</div>
-					</div>
-					<div class="email_container">
-						<div class="input_title">Product key</div>
-						<input type="text" id="product_key" name="product_key">
-						<div class="invalid_text" id="product_key_error_field">{product key} is invalid</div>
-					</div>
-					<div class="forgot_div"><a href="forgot.html">Forgot product key</a></div>
-					<div class="download_button_container">
-						<button class="okay_button" id="submit">Download</button>
-					</div>
-				</form>
-			</div>
-			<div class="please_desc">Please touch <a href="start.html">'Get Started for Free'</a>if you need product key</div>
-		</div>
-	</section>
-	<section class="download_container">
-		<div class="wrap">
-			<div class="title">Select your installation enviroments.</div>
-			<form id="download_option_form">
-				<div class="download_list_container">
-					<div class="download_list_wrap">
-						<div class="title">Product Type</div>
-						<div class="download_list_radio">
-							<div class="download_list_radio_li">
-								<input type="radio" name="product_type" value="desktop" checked>
-								<label for="html">Desktop</label>
-							</div>
-							<div class="download_list_radio_li">
-								<input type="radio" name="product_type" value="python_package">
-								<label for="css">Python Package (.whl)</label>
-							</div>
-						</div>
-					</div>
-					<div class="download_list_wrap">
-						<div class="title">Operation system</div>
-						<ul class="os_list">
-							<li>
-								<label for="window"> <img src="images/os1.svg" alt=""></label>
-								<div class="download_list_radio_li">
-									<input type="radio" name="operation_system" value="window" checked>
-									<label for="window">Windows</label>
-								</div>
-							</li>
-							<li>
-								<label for="intel"><img src="images/os2.svg" alt=""></label>
-								<div class="download_list_radio_li">
-									<input type="radio" name="operation_system" value="apple_intel">
-									<label for="intel"><span class="mo_no">Mac OS</span><span class="intel">intel</span></label>
-								</div>
-							</li>
-							<li>
-								<label for="apple_silicon"><img src="images/os2.svg" alt=""></label>
-								<div class="download_list_radio_li">
-									<input type="radio" name="operation_system" value="apple_silicon">
-									<label for="apple_silicon"><span class="mo_no">Mac OS</span><span class="apple_silicon">apple
-											silicon</span></label>
-								</div>
-							</li>
-							<li>
-								<label for="linux"><img src="images/os3.svg" alt=""></label>
-								<div class="download_list_radio_li">
-									<input type="radio" name="operation_system" value="linux">
-									<label for="linux">linux</label>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="download_list_wrap">
-						<div class="title">Python version</div>
-						<ul class="download_list_radio">
-							<div class="download_list_radio_li">
-								<input type="radio" name="python_version" value="3.6">
-								<label for="3.6">3.6</label>
-							</div>
-							<div class="download_list_radio_li">
-								<input type="radio" name="python_version" value="3.7">
-								<label for="3.7">3.7</label>
-							</div>
-							<div class="download_list_radio_li">
-								<input type="radio" name="python_version" value="3.8">
-								<label for="3.8">3.8</label>
-							</div>
-							<div class="download_list_radio_li">
-								<input type="radio" name="python_version" value="3.9" checked>
-								<label for="3.9">3.9</label>
-							</div>
-						</ul>
-					</div>
-				</div>
-				<div class="download_button_container">
-					<!-- onclick="window.location.href='index.html'" -->
-					<a href="#ex1" rel="modal:open" class="okay_button" style="opacity: 1" click="dialogScript()">Download</a>
-				</div>
-			</form>
-		</div>
-	</section>
-	<script src="js/navbar.js" defer></script>
-	<script src="js/download.js" defer></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" defer></script>
-	<!-- jQuery Modal -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js" defer></script>
-</body>
-
+  <body>
+    <nav id="navbar">
+      <div class="navbar_container">
+        <div class="wrap">
+          <div class="navbar__logo" data-target="index">
+            <a href="index.html"><img src="images/logo.svg" alt="" /></a>
+          </div>
+          <ul class="navbar__menu">
+            <li
+              class="navbar__menu__item"
+              data-target="feature"
+              data-link="#feature"
+            >
+              <a href="index.html">Features</a>
+            </li>
+            <li class="navbar__menu__item" data-target="download">Download</li>
+            <li class="navbar__menu__item" data-target="documentation">
+              <a href="https://makinarocks.gitbook.io/link/" target="blank"
+                >Documentation</a
+              >
+            </li>
+            <button class="get_button">Get Started for Free</button>
+          </ul>
+          <a class="navbar__toggle">
+            <span>메뉴</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section id="ex1" class="modal">
+      <div class="login">
+        <div class="text_container">
+          <div class="title">Download Link!</div>
+          <div class="sub_title">
+            We support various OS such as Window, Apple , Linux
+          </div>
+        </div>
+        <div class="input_container">
+          <form id="download_form">
+            <div class="email_container">
+              <div class="input_title">Email</div>
+              <input type="text" id="email" name="email" />
+              <div class="invalid_text" id="email_error_field">
+                {emai} is invalid
+              </div>
+            </div>
+            <div class="email_container">
+              <div class="input_title">Product key</div>
+              <input type="text" id="product_key" name="product_key" />
+              <div class="invalid_text" id="product_key_error_field">
+                {product key} is invalid
+              </div>
+            </div>
+            <div class="forgot_div">
+              <a href="forgot.html">Forgot product key</a>
+            </div>
+            <div class="download_button_container">
+              <button class="okay_button" id="submit">Download</button>
+            </div>
+          </form>
+        </div>
+        <div class="please_desc">
+          Please touch <a href="start.html">'Get Started for Free'</a>if you
+          need product key
+        </div>
+      </div>
+    </section>
+    <section class="download_container">
+      <div class="wrap">
+        <div class="title">Select your installation enviroments.</div>
+        <form id="download_option_form">
+          <div class="download_list_container">
+            <div class="download_list_wrap">
+              <div class="title">Product Type</div>
+              <div class="download_list_radio">
+                <div class="download_list_radio_li">
+                  <input
+                    type="radio"
+                    name="product_type"
+                    value="desktop"
+                    checked
+                  />
+                  <label for="html">Desktop</label>
+                </div>
+                <div class="download_list_radio_li">
+                  <input
+                    type="radio"
+                    name="product_type"
+                    value="python_package"
+                  />
+                  <label for="css">Python Package (.whl)</label>
+                </div>
+              </div>
+            </div>
+            <div class="download_list_wrap">
+              <div class="title">Operation System</div>
+              <ul class="os_list">
+                <li>
+                  <label for="window">
+                    <img src="images/os1.svg" alt=""
+                  /></label>
+                  <div class="download_list_radio_li">
+                    <input
+                      type="radio"
+                      name="operation_system"
+                      value="window"
+                      checked
+                    />
+                    <label for="window">Windows</label>
+                  </div>
+                </li>
+                <li>
+                  <label for="intel"><img src="images/os2.svg" alt="" /></label>
+                  <div class="download_list_radio_li">
+                    <input
+                      type="radio"
+                      name="operation_system"
+                      value="apple_intel"
+                    />
+                    <label for="intel"
+                      ><span class="mo_no">macOS</span
+                      ><span class="intel">Intel</span></label
+                    >
+                  </div>
+                </li>
+                <li>
+                  <label for="apple_silicon"
+                    ><img src="images/os2.svg" alt=""
+                  /></label>
+                  <div class="download_list_radio_li">
+                    <input
+                      type="radio"
+                      name="operation_system"
+                      value="apple_silicon"
+                    />
+                    <label for="apple_silicon"
+                      ><span class="mo_no">macOS</span>
+                      <span class="apple_silicon">Apple Silicon</span></label
+                    >
+                  </div>
+                </li>
+                <li>
+                  <label for="linux"><img src="images/os3.svg" alt="" /></label>
+                  <div class="download_list_radio_li">
+                    <input type="radio" name="operation_system" value="linux" />
+                    <label for="linux">linux</label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="download_list_wrap">
+              <div class="title">Python Version</div>
+              <ul class="download_list_radio">
+                <div class="download_list_radio_li">
+                  <input type="radio" name="python_version" value="3.6" />
+                  <label for="3.6">3.6</label>
+                </div>
+                <div class="download_list_radio_li">
+                  <input type="radio" name="python_version" value="3.7" />
+                  <label for="3.7">3.7</label>
+                </div>
+                <div class="download_list_radio_li">
+                  <input type="radio" name="python_version" value="3.8" />
+                  <label for="3.8">3.8</label>
+                </div>
+                <div class="download_list_radio_li">
+                  <input
+                    type="radio"
+                    name="python_version"
+                    value="3.9"
+                    checked
+                  />
+                  <label for="3.9">3.9</label>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <div class="download_button_container">
+            <!-- onclick="window.location.href='index.html'" -->
+            <a
+              href="#ex1"
+              rel="modal:open"
+              class="okay_button"
+              style="opacity: 1"
+              click="dialogScript()"
+              >Download</a
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/download.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"
+      defer
+    ></script>
+    <!-- jQuery Modal -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"
+      defer
+    ></script>
+  </body>
 </html>

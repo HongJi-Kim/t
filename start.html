@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    ﻿
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="css/style1.css" />
+    <link rel="stylesheet" href="css/download.css" />
+    <style>
+      .captcha_container {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+    <title>start</title>
+  </head>
 
+<<<<<<< Updated upstream
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"> ﻿
@@ -130,3 +151,146 @@
 </body>
 
 </html>
+=======
+  <body>
+    <nav id="navbar">
+      <div class="navbar_container">
+        <div class="wrap">
+          <div class="navbar__logo" data-target="index">
+            <a href="index.html"><img src="images/logo.svg" alt="" /></a>
+          </div>
+          <ul class="navbar__menu">
+            <li
+              class="navbar__menu__item"
+              data-target="feature"
+              data-link="#feature"
+            >
+              <a href="index.html">Features</a>
+            </li>
+            <li class="navbar__menu__item" data-target="download">Download</li>
+            <li class="navbar__menu__item" data-target="documentation">
+              <a href="https://makinarocks.gitbook.io/link/" target="blank"
+                >Documentation</a
+              >
+            </li>
+            <button class="get_button">Get started for Free</button>
+          </ul>
+          <a class="navbar__toggle">
+            <span>메뉴</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="start_for_free">
+      <form id="start_form" class="start_input_container">
+        <div>
+          <div class="start_input">
+            <div class="text_container">
+              <div class="title">Get started with Link</div>
+              <div class="sub_title">
+                To start Link for free, please fill out contents below.
+              </div>
+            </div>
+            <div class="input_container">
+              <div class="name_container">
+                <div class="name_input_contatier">
+                  <div class="input_title">First name *</div>
+                  <input type="text" id="fname" name="fname" />
+                  <div class="invalid_text" id="fname_error_field">
+                    {first name} is invalid
+                  </div>
+                </div>
+                <div class="name_input_contatier">
+                  <div class="input_title">Last name *</div>
+                  <input type="text" id="lname" name="lname" />
+                  <div class="invalid_text" id="lname_error_field">
+                    {last name} is invalid
+                  </div>
+                </div>
+              </div>
+              <div class="email_container">
+                <div class="input_title">Email *</div>
+                <input type="text" id="email" name="email" />
+                <div class="invalid_text" id="email_error_field">
+                  Email is invalid
+                </div>
+              </div>
+              <div class="job_title_container">
+                <div class="input_title">Job title *</div>
+                <select name="job" id="job">
+                  <option value="Data scientist">Data scientist</option>
+                  <option value="MLOps_engineer">MLOps engineer</option>
+                  <option value="S/W_engineer">S/W engineer</option>
+                  <option value="DevOps_engineer">DevOps engineer</option>
+                  <option value="System_engineer">System engineer</option>
+                  <option value="Product_Manager">Product Manager</option>
+                  <option value="Marketer">Marketer</option>
+                  <option value="Sales">Sales</option>
+                  <option value="Student">Student</option>
+                  <option value="etc">etc</option>
+                </select>
+              </div>
+              <div class="organaization_container">
+                <div class="input_title">
+                  Organization *<span class="organaization_example"
+                    >(e.g company, universit or lab)</span
+                  >
+                </div>
+                <input type="text" id="organization" name="organization" />
+                <div class="invalid_text" id="organization_error_field">
+                  Email is invalid
+                </div>
+              </div>
+            </div>
+            <div class="check_container_p">
+              <div class="start_check_container">
+                <input
+                  type="checkbox"
+                  id="agreement_private_policy"
+                  name="agreement_private_policy"
+                />
+                <label class="label_for_check" for="cb1">
+                  (Required) I have read and fully agree to the Terms of Use and
+                  Privacy Policy.
+                </label>
+              </div>
+              <div class="start_check_container">
+                <input
+                  type="checkbox"
+                  id="agreement_marketing_policy"
+                  name="agreement_marketing_policy"
+                />
+                <label class="label_for_check" for="cb1">
+                  (Optional) I agree to receive promotion and marketing
+                  information related to MakinaRocks.
+                </label>
+              </div>
+            </div>
+            <div class="captcha_container">
+              <div id="html_element"></div>
+            </div>
+            <div class="button_container">
+              <!-- onclick="window.location.href='start2.html'" -->
+              <button class="okay_button" id="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <script>
+      var onloadCallback = function () {
+        grecaptcha.render('html_element', {
+          sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+        })
+      }
+    </script>
+    <script
+      src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async
+      defer
+    ></script>
+    <script src="./js/navbar.js" defer></script>
+    <script src="./js/start.js" defer></script>
+  </body>
+</html>
+>>>>>>> Stashed changes
